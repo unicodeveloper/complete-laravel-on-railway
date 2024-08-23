@@ -4,7 +4,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "format": "npm run format"
+        "format": "npm run format",
+        "start": "node cron.js"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
