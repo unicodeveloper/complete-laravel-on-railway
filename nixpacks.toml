@@ -1,0 +1,8 @@
+[phases.setup]
+aptPkgs = ["...", "cron"]
+
+[phases.build]
+cmds = ["echo first building.....", "...", "echo last building....."]
+
+[start]
+cmd = "./start.sh"
