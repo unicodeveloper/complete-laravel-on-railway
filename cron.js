@@ -1,5 +1,5 @@
-const cron = require('node-cron');
-const shell = require('shelljs');
+import cron from 'node-cron';
+import shell from 'shelljs';
 
 /**
  * Schedule tasks to be run on Railway
