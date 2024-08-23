@@ -6,5 +6,6 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schedule;
 
 
-Schedule::command('app:get-details-from-console')->everyFifteenSeconds();
+
+Schedule::command('mail:send')->everyFifteenSeconds();
 

@@ -2,30 +2,31 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\TalkSubmitted;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Mail;
 
-class GetDetailsFromConsole extends Command
+class SendMailFrequently extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:get-details-from-console';
+    protected $signature = 'mail:send';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Send email frequently';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $this->info("You are here!");
-        $this->info("Reason to work at Railway");
+        Mail::to('prosperotemuyiwa@gmail.com')->send(new TalkSubmitted);
     }
 }
