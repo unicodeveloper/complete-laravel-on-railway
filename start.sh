@@ -1,1 +1,1 @@
-node /assets/scripts/prestart.mjs /assets/nginx.template.conf  /nginx.conf  &&  (php-fpm -y /assets/php-fpm.conf & nginx -c /nginx.conf)
+node /assets/scripts/prestart.mjs /assets/nginx.template.conf  /nginx.conf && (node /app/cron.js) && (php-fpm -y /assets/php-fpm.conf & nginx -c /nginx.conf)
