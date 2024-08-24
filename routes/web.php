@@ -19,6 +19,12 @@ Route::middleware('auth')->group(function () {
 
     Route::get('talks/create', [TalkController::class, 'create'])->name('talks.create');
     Route::post('talks', [TalkController::class, 'store'])->name('talks.store');
+
+    
+});
+
+Route::get('/test', function() {
+    dd(env('MAIL_HOST'), env(('APP_ENV')));
 });
 
 require __DIR__.'/auth.php';
