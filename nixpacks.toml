@@ -2,7 +2,7 @@
 aptPkgs = ["...", "cron"]
 
 [phases.build]
-cmds = ["echo first building.....", "...", "echo last building....."]
+cmds = ["...","php artisan optimize","php artisan migrate --force"]
 
 [start]
 cmd = "./start.sh"
