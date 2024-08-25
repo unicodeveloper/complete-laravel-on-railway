@@ -1,5 +1,5 @@
 [phases.setup]
-aptPkgs = ["...", "cron"]
+aptPkgs = ["...", "cron", "php-redis"]
 
 [phases.build]
 cmds = ["...","php artisan optimize:clear","php artisan migrate --force"]
