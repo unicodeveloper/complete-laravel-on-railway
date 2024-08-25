@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Conference;
 use App\Models\Talk;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,10 +17,8 @@ class DatabaseSeeder extends Seeder
         User::factory()
         ->has(Talk::factory()->count(5))
         ->create([
-            'name' => 'Prosper Otemuyiwa',
-            'email' => 'prosperotemuyiwa@gmail.com',
+            'name' => 'First Person',
+            'email' => 'thisperson@gmail.com',
         ]);
-
-        Conference::factory()->count(5)->create();
     }
 }

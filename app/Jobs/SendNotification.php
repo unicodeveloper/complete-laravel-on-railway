@@ -27,6 +27,6 @@ class SendNotification implements ShouldQueue
      */
     public function handle(): void
     {
-        Mail::to('prosperotemuyiwa@gmail.com')->send(new RecipeReceived);
+        Mail::to('random@thisperson.com')->send(new RecipeReceived);
     }
 }

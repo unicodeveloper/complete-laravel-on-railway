@@ -27,27 +27,24 @@ Route::middleware('auth')->group(function () {
     
 });
 
-Route::get('/test', function() {
-    dd(env('MAIL_HOST'), env(('APP_ENV')));
-});
-
 Route::get('/jobs', function() {
 
-    /**
+    /** 
+     * Test Jobs are working...
      * dispatch SendNotification and AddDataToDB Job
      */
+
+    echo "Your jobs are being dispatching....";
     Bus::chain([
         new AddDatatoDB,
         new SendNotification
     ])->dispatch();
-
-    echo "Your jobs are being dispatching....";
 });
 
 Route::get('/cache', function() {
 
     /**
-     * Testing your cache infra
+     * Testing your cache infra is working...
      */
     echo "Storing inside the redis cache...\n";
     Cache::store('redis')->put('bar', 'baz', 600); // 10 Minutes

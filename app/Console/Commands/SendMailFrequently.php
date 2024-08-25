@@ -27,6 +27,6 @@ class SendMailFrequently extends Command
      */
     public function handle()
     {
-        Mail::to('prosperotemuyiwa@gmail.com')->send(new TalkSubmitted);
+        Mail::to('random@thisperson.com')->send(new TalkSubmitted);
     }
 }
