@@ -16,10 +16,12 @@ It spins up 5 services with the same codebase:
 
 - Deploy the template on Railway.
 - Copy the `.env.example` to your service variables on Railway dashboard and set them accordingly.
-- Add a **DB_URL** variable with its value as the deployed MySQL instance URL to the (web, worker & cron services).
+- Add a **DB_URL** variable with its value as the deployed MySQL PUBLIC URL to the (web, worker & cron services).
     - e.g _DB_URL="mysql://root:kkkkdYtakFbpprtRaLQPgXbtHmgiOsyR@junction.proxy.rlwy.net:57100/railway"_
-- Add a **REDIS_URL** variable with its value as the deployed MySQL instance URL to the (web, worker & cron services).
+- Add a **REDIS_URL** variable with its value as the deployed REDIS PUBLIC URL to the (web, worker & cron services).
     - e.g _REDIS_URL="redis://default:kkkkdYtakFbpprtRaLQPgXbtHmgiOsyR@autorack.proxy.rlwy.net:10446"_
+
+**Note:** You can use [shared variables](https://docs.railway.app/guides/variables#shared-variables) to reduce duplication of variables across multiple services.
 
 ## License
 
