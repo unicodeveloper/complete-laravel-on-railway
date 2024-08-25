@@ -49,11 +49,14 @@ Route::get('/cache', function() {
     /**
      * Testing your cache infra
      */
-    echo "Storing inside the redis cache...";
+    echo "Storing inside the redis cache...\n";
     Cache::store('redis')->put('bar', 'baz', 600); // 10 Minutes
-    
+    Cache::put('paas', 'railway'); // store indefinitely
+
     $value = Cache::get('bar');
-    echo "This is the result from the cache...{$value}";
+    $deployment = Cache::get('paas');
+    echo "This is the result from the cache for bar...{$value} \n";
+    echo "This is the result from the cache for paas...{$deployment}";
     
 });
 
