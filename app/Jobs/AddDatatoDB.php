@@ -30,8 +30,8 @@ class AddDatatoDB implements ShouldQueue
         User::factory()
         ->has(Talk::factory()->count(5))
         ->create([
-            'name' => 'Jemine Eyinmisan',
-            'email' => 'jemine@gmail.com',
+            'name' => fake()->name(),
+            'email' => fake()->email()
         ]);
     }
 }
