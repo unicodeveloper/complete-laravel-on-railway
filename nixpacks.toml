@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["...", "php82Extensions.redis"]
+nixPkgs = ["...", "php-redis", "php82Extensions.redis"]
 
 [phases.build]
 cmds = ["...","php artisan optimize:clear","php artisan migrate --force"]
