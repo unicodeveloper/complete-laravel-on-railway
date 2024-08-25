@@ -38,8 +38,8 @@ Route::get('/jobs', function() {
     // dispatch(new SendNotification, new AddDatatoDB);
 
     Bus::chain([
-        new SendNotification,
-        new AddDatatoDB
+        new AddDatatoDB,
+        new SendNotification
     ])->dispatch();
 
     echo "Your jobs are being dispatching....";
