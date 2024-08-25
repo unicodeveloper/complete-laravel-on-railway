@@ -2,7 +2,7 @@
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/Gkzn4k?referralCode=yuv1Gy)
 
-This complete Laravel starter template deploys a Laravel Breeze app as a majestic monolith that is connected to a MySQL database and Redis Cache on [Railway Paas](https://railway.app).
+This complete Laravel starter template deploys a **Laravel Breeze app** as a _**majestic monolith**_ that is connected to a MySQL database and Redis Cache on [Railway Paas](https://railway.app).
 
 It spins up 5 services with the same codebase:
 - **web service**: This runs the app.
@@ -15,7 +15,7 @@ It spins up 5 services with the same codebase:
 ## Configuration
 
 - Deploy the template on Railway.
-- Copy the `.env.example` to your env variables on Railway dashboard and set them accordingly.
+- Copy the `.env.example` to your service variables on Railway dashboard and set them accordingly.
 - Add a **DB_URL** variable with its value as the deployed MySQL instance URL to the (web, worker & cron services).
     - e.g _DB_URL="mysql://root:kkkkdYtakFbpprtRaLQPgXbtHmgiOsyR@junction.proxy.rlwy.net:57100/railway"_
 - Add a **REDIS_URL** variable with its value as the deployed MySQL instance URL to the (web, worker & cron services).
