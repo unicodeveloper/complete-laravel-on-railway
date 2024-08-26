@@ -7,5 +7,5 @@ use Illuminate\Support\Facades\Schedule;
 
 
 
-Schedule::command('mail:send')->everyTenMinutes();
+Schedule::command('mail:send')->everyTwoHours();
 
